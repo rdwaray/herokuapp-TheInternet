@@ -1,0 +1,8 @@
+1- API Testing 
+2- REST API
+3- Postman
+4- HTML / CSS basics
+5- Selenium
+6- Playright
+7- GraphQL
+8- 

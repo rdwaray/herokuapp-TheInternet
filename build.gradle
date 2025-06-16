@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.seleniumhq.selenium:selenium-java:4.33.0")
+    implementation("io.github.bonigarcia:webdrivermanager:6.1.0")
+    implementation("com.github.javafaker:javafaker:1.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.13.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.13.0")
+    testImplementation("io.cucumber:cucumber-junit:7.22.2")
+    implementation("io.cucumber:cucumber-java:7.22.2")
+    testImplementation 'io.qameta.allure:allure-cucumber7-jvm:2.20.1'
+
+    testImplementation 'io.qameta.allure:allure-junit5:2.24.0'
+
+}
+
+test {
+//    useJUnitPlatform()
+    systemProperty 'allure.results.directory', 'build/allure-results'
+
+}
+
+allure {
+    version = '2.24.0'
+}
